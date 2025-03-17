@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Mangás</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #ff4500;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 900px;
+        }
+        .grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px auto;
+        }
+        .manga {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 200px;
+            text-align: center;
+        }
+        .manga img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #e03e00;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+        #destaque, #catalogo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loja de Mangás</h1>
+        <nav>
+            <ul>
+                <li><a href="#destaque">Destaque</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="destaque">
+            <h2>Mangá em Destaque</h2>
+            <div class="manga">
+                <img src="https://recreio.com.br/media/_versions/2024/02/one-piece_capa_widelg.jpg" alt="Mangá em destaque">
+                <p><strong>Título:</strong> One Piece</p>
+                <p><strong>Preço:</strong> R$ 39,90</p>
+                <button onclick="adicionarAoCarrinho('One Piece', 39.90)">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+        
+        <section id="catalogo">
+            <h2>Catálogo</h2>
+            <div class="grid">
+                <div class="manga">
+                    <img src="https://images.pluto.tv/channels/64c92f965580090008084968/featuredImage.jpg?auto=&q=70&fit=fill&fill=blur&ixlib=react-9.1.5" alt="Mangá 1">
+                    <p><strong>Título:</strong> Naruto</p>
+                    <p><strong>Preço:</strong> R$ 29,90</p>
+                    <button onclick="adicionarAoCarrinho('Naruto', 29.90)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="manga">
+                    <img src="https://img.lemde.fr/2015/07/04/0/0/640/320/1440/720/60/0/b4d79a8_12248-1lx3oap.jpg" alt="Mangá 2">
+                    <p><strong>Título:</strong>Dragon Ball</p>
+                    <p><strong>Preço:</strong> R$ 34,90</p>
+                    <button onclick="adicionarAoCarrinho('Dragon Ball', 34.90)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contato">
+        <p>&copy; 2025 Loja de Mangás - Contato: contato@lojademangas.com</p>
+    </footer>
+    
+    <script>
+        function adicionarAoCarrinho(nome, preco) {
+            alert(`${nome} foi adicionado ao carrinho por R$ ${preco.toFixed(2)}`);
+        }
+    </script>
+</body>
+</html>
